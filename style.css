@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    background: #000;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#game-canvas {
+    flex: 1;
+    width: 100%;
+    background: #2d5016;
+    display: block;
+}
+
+#coordinates-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    border: 1px solid #0f0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#terminal-container {
+    height: 250px;
+    background: #1a1a1a;
+    border-top: 2px solid #0f0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#terminal-output::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+    background: #0f0;
+    border-radius: 4px;
+}
+
+#terminal-input-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-top: 1px solid #333;
+    background: #0f0f0f;
+}
+
+.prompt {
+    color: #0f0;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+}
+
+#terminal-hint {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0f0;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    border: 2px solid #0f0;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    animation: slideIn 0.3s;
+}
+
+.modal-content h2 {
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #0f0;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #0f0;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

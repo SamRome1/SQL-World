@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="coordinates-display">X: 0, Z: 0</div>
+        <div id="terminal-container">
+            <div id="terminal-output"></div>
+            <div id="terminal-input-container">
+                <span class="prompt">sql></span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+            </div>
+            <div id="terminal-hint">WASD to move • Enter to submit SQL</div>
+        </div>
+    </div>
+    
+    <!-- Homebase Modal -->
+    <div id="homebase-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Welcome to SQL World</h2>
+            <p>Level up and destroy creatures to win!</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
