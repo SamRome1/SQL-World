@@ -28,7 +28,22 @@
             <p>Level up and destroy creatures to win!</p>
         </div>
     </div>
+    
+    <!-- Challenge Modal -->
+    <div id="challenge-modal" class="modal">
+        <div class="modal-content">
+            <span class="challenge-close">&times;</span>
+            <h2 id="challenge-title"></h2>
+            <p id="challenge-prompt"></p>
+            <div class="mini-terminal">
+                <div id="challenge-output"></div>
+                <div class="mini-input">
+                    <span class="prompt">sql></span>
+                    <input type="text" id="challenge-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
-
